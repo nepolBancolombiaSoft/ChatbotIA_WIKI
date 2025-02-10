@@ -73,3 +73,12 @@ Este proyecto se distribuye bajo la licencia MIT. Puedes usarlo libremente para 
 
 Si tienes dudas o sugerencias, puedes abrir un issue en el repositorio o contactarme a través de [correo electrónico](polosoft1@gmail.com).
 
+
+![2025-02-10_11-01](https://github.com/user-attachments/assets/76f5c53d-108a-45e0-83e9-3bc916641e66)
+![2025-02-10_11-03](https://github.com/user-attachments/assets/ef09cb67-f35c-4427-950c-12a2b357359c)
+![2025-02-10_11-06](https://github.com/user-attachments/assets/1fbc3a87-9343-42d2-b8d8-20ae477a44b2)
+![2025-02-10_11-10](https://github.com/user-attachments/assets/817b1342-867e-4b36-a11f-952166fe4aa8)
+
+GUI:
+![imagen (1)](https://github.com/user-attachments/assets/5b4e5e82-6fe7-493b-8954-5c0dfd159fa6)
+![imagen](https://github.com/user-attachments/assets/604d9cf4-31df-4327-a921-ce2067b7851f)
