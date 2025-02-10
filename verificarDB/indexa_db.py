@@ -12,7 +12,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "wiki_db")
 
 # 📌 Inicializar ChromaDB
-db = Chroma(persist_directory=DB_PATH, embedding_function=HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2"))
+db = Chroma(persist_directory=DB_PATH, embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small"))
 
 # 📌 Reinicializar ChromaDB correctamente
 print("🚨 Eliminando y reinicializando la base de datos...")
