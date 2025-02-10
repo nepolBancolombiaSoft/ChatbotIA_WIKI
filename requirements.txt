@@ -1,0 +1,8 @@
+cohere
+langchain
+langchain_chroma
+langchain_huggingface
+transformers
+mtranslate
+streamlit
+deep-translator

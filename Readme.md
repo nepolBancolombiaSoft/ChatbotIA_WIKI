@@ -1,10 +1,6 @@
 # Proyecto IA Wiki
 
-## Descripción
-
-Proyecto IA Wiki es un sistema de chatbot basado en inteligencia artificial con integración a una base de datos. Su objetivo es proporcionar respuestas basadas en información indexada de una wiki, mejorando el acceso a la documentación de manera automatizada.
-
-Este proyecto es Open Source, por lo que cualquier persona puede contribuir con mejoras y nuevas funcionalidades.
+Este proyecto es un sistema de chatbot basado en inteligencia artificial con integración a una base de datos y una interfaz de aplicación. A continuación, se describe la estructura del proyecto y la funcionalidad de cada archivo.
 
 ## Estructura del Proyecto
 
@@ -20,65 +16,80 @@ proyectoIAwiki_extracted/
     token_verifi.py  # Verificación de autenticación basada en tokens
     verificar_db.py  # Script para verificar la integridad de la base de datos
     __pycache__/  # Caché de Python
+        chatbot.cpython-310.pyc  # Versión compilada de chatbot.py
+        config.cpython-310.pyc  # Versión compilada de config.py
+        token.cpython-310.pyc  # Versión compilada de token_verifi.py
     backup_chat/
+        chatbot_bk.py  # Copia de seguridad del código del chatbot
     wiki_db/
+        chroma.sqlite3  # Base de datos SQLite con el contenido de la wiki
+        85ab03e3-b59c-430c-b421-c225b6e1e915/
+            data_level0.bin  # Datos binarios de la base de datos
+            header.bin  # Encabezado de la base de datos
+            length.bin  # Longitudes de datos indexados
+            link_lists.bin  # Listas de enlaces indexados
 ```
 
-## Instalación
+## Descripción de Archivos Clave
 
-### 1. Requisitos Previos
-- Python 3.10 o superior
-- pip instalado
-- PowerShell (para sincronización de la wiki en Windows)
+### 1. `app.py`
+Este archivo es el punto de entrada de la aplicación. Se encarga de iniciar el chatbot y gestionar las interacciones con el usuario.
 
-### 2. Clonar el Repositorio
-```sh
-git clone https://github.com/tuusuario/proyectoIAwiki.git
-cd proyectoIAwiki
-```
+### 2. `chatbot.py`
+Este módulo contiene la lógica principal del chatbot, incluyendo el procesamiento de mensajes, la integración con la base de datos y la generación de respuestas.
 
-### 3. Instalar Dependencias
+### 3. `config.py`
+Archivo de configuración donde se almacenan las variables necesarias para la ejecución del proyecto, como claves API, configuraciones de conexión y parámetros globales.
+
+### 4. `indexa_db.py`
+Script que indexa la base de datos, permitiendo que la información sea buscada y recuperada de manera eficiente.
+
+### 5. `requirements.txt`
+Lista de bibliotecas y dependencias necesarias para ejecutar el proyecto. Se recomienda instalar las dependencias con:
 ```sh
 pip install -r requirements.txt
 ```
 
-### 4. Configurar Variables
-Modifica `config.py` con tus credenciales y configuraciones necesarias.
+### 6. `sync_wiki.ps1`
+Script de PowerShell utilizado para sincronizar la base de datos de la wiki, asegurando que siempre esté actualizada.
 
-## Uso
+### 7. `token_verifi.py`
+Este script se encarga de la verificación de tokens para garantizar la autenticación segura de los usuarios.
 
-### Ejecutar la Aplicación
+### 8. `verificar_db.py`
+Herramienta para verificar la integridad y estructura de la base de datos utilizada por el chatbot.
+
+### 9. `backup_chat/chatbot_bk.py`
+Copia de seguridad del chatbot principal, útil en caso de que se necesite restaurar código anterior.
+
+### 10. `wiki_db/`
+Directorio que contiene la base de datos en formato SQLite junto con archivos binarios utilizados para la indexación y almacenamiento eficiente de datos.
+
+## Instalación y Uso
+
+### Instalación de Dependencias
+Ejecuta el siguiente comando para instalar todas las dependencias requeridas:
+```sh
+pip install -r requirements.txt
+```
+
+### Ejecución del Proyecto
+Para iniciar la aplicación, ejecuta:
 ```sh
 python app.py
 ```
 
-### Sincronizar la Base de Datos de la Wiki
+Si deseas sincronizar la base de datos de la wiki manualmente, ejecuta:
 ```sh
 powershell -ExecutionPolicy Bypass -File sync_wiki.ps1
 ```
 
-## Contribuciones
+## Notas Adicionales
+- Asegúrate de tener Python instalado (versión 3.10 o superior recomendada).
+- Si necesitas modificar las configuraciones, edita el archivo `config.py`.
+- La base de datos se actualiza automáticamente al ejecutar el script de sincronización.
 
-Las contribuciones son bienvenidas. Para contribuir:
-1. Realiza un fork del repositorio.
-2. Crea una rama con tu nueva funcionalidad (`git checkout -b nueva-funcionalidad`).
-3. Realiza tus cambios y súbelos (`git commit -m 'Añadir nueva funcionalidad'`).
-4. Envía un pull request para revisión.
+---
 
-## Licencia
+Este proyecto está en constante desarrollo. Si tienes sugerencias o encuentras algún error, no dudes en contribuir o reportarlo.
 
-Este proyecto se distribuye bajo la licencia MIT. Puedes usarlo libremente para cualquier propósito.
-
-## Contacto
-
-Si tienes dudas o sugerencias, puedes abrir un issue en el repositorio o contactarme a través de [correo electrónico](polosoft1@gmail.com).
-
-
-![2025-02-10_11-01](https://github.com/user-attachments/assets/76f5c53d-108a-45e0-83e9-3bc916641e66)
-![2025-02-10_11-03](https://github.com/user-attachments/assets/ef09cb67-f35c-4427-950c-12a2b357359c)
-![2025-02-10_11-06](https://github.com/user-attachments/assets/1fbc3a87-9343-42d2-b8d8-20ae477a44b2)
-![2025-02-10_11-10](https://github.com/user-attachments/assets/817b1342-867e-4b36-a11f-952166fe4aa8)
-
-GUI:
-![imagen (1)](https://github.com/user-attachments/assets/5b4e5e82-6fe7-493b-8954-5c0dfd159fa6)
-![imagen](https://github.com/user-attachments/assets/604d9cf4-31df-4327-a921-ce2067b7851f)
