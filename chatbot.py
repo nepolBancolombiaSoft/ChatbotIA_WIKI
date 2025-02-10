@@ -16,8 +16,8 @@ DB_PATH = os.path.join(BASE_DIR, "wiki_db")
 
 db = Chroma(
     persist_directory=DB_PATH,
-    embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small"),
-    allow_reset=False
+    embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small")
+    
 )
 #retriever = db.as_retriever()
 retriever = db.as_retriever(search_kwargs={"k": 2})
