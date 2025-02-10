@@ -16,9 +16,11 @@ DB_PATH = os.path.join(BASE_DIR, "wiki_db")
 
 db = Chroma(
     persist_directory=DB_PATH,
-    embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small")
+    embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small"),
+    allow_reset=False
 )
-retriever = db.as_retriever()
+#retriever = db.as_retriever()
+retriever = db.as_retriever(search_kwargs={"k": 2})
 print(f"📂 Base de datos guardada en: {DB_PATH}")
 
 # 📌 Historial de conversación
