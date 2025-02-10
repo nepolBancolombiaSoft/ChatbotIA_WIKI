@@ -16,7 +16,7 @@ DB_PATH = os.path.join(BASE_DIR, "wiki_db")
 
 db = Chroma(
     persist_directory=DB_PATH,
-    embedding_function=HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+    embedding_function=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-small")
 )
 retriever = db.as_retriever()
 print(f"📂 Base de datos guardada en: {DB_PATH}")
