@@ -7,5 +7,4 @@ mtranslate
 streamlit
 deep-translator
 langdetect
-gunicorn
 
