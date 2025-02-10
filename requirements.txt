@@ -6,3 +6,5 @@ transformers
 mtranslate
 streamlit
 deep-translator
+langdetect
+
