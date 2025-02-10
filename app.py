@@ -23,8 +23,4 @@ if pregunta:
     else:
         st.write("⚠️ No encontré documentos relevantes en la base de datos.")
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8501))  # Render asigna un puerto dinámico
-    st.write(f"🚀 Ejecutando en el puerto {port}")
-    st._is_running_with_streamlit = True
-    st.run()
+
