@@ -1,7 +1,13 @@
+import os
 import streamlit as st
 from chatbot import generar_respuesta  # ✅ Importar la función correcta
 
+# Obtener el puerto asignado por Railway
+def obtener_puerto():
+    return int(os.getenv("PORT", 8501))
+
 # Configuración de la interfaz con Streamlit
+st.set_page_config(page_title="Chatbot Wiki - Entra ID", layout="wide")
 st.title("🤖 Chatbot Wiki - Entra ID")
 st.write("Consulta sobre la Wiki de Azure y Entra ID.")
 
@@ -19,8 +25,11 @@ if pregunta:
             with st.expander(f"📄 Documento {idx}"):
                 st.write(f"📝 **Extracto:** {doc['contenido']}...")
                 st.markdown(f"[🔗 Ver en la Wiki]({doc['url']})")
-
     else:
         st.write("⚠️ No encontré documentos relevantes en la base de datos.")
 
-
+if __name__ == "__main__":
+    port = obtener_puerto()
+    st.write(f"🚀 Ejecutando en el puerto {port}")
+    st._is_running_with_streamlit = True
+    st.run()
