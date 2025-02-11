@@ -4,7 +4,7 @@ from chatbot import generar_respuesta  # ✅ Importar la función correcta
 
 # Obtener el puerto asignado por Railway
 def obtener_puerto():
-    return int(os.getenv("PORT", 8501))
+    return int(os.getenv("PORT", 8080))
 
 # Configuración de la interfaz con Streamlit
 st.set_page_config(page_title="Chatbot Wiki - Entra ID", layout="wide")
@@ -28,5 +28,7 @@ if pregunta:
     else:
         st.write("⚠️ No encontré documentos relevantes en la base de datos.")
 
-# 🚀 Mensaje para verificar que la aplicación está corriendo en el puerto correcto
-st.write(f"🚀 Ejecutando en el puerto {obtener_puerto()}")
+# 🚀 Ejecutar la aplicación en el puerto correcto
+if __name__ == "__main__":
+    st.write(f"🚀 Ejecutando en el puerto {port}")
+    os.system(f"streamlit run app.py --server.port {port} --server.address 0.0.0.0")
