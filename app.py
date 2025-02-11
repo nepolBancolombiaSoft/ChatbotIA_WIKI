@@ -4,7 +4,7 @@ from chatbot import generar_respuesta  # ✅ Importar la función correcta
 
 # Obtener el puerto asignado por Railway
 def obtener_puerto():
-    return int(os.getenv("PORT", 8080))
+    return int(os.getenv("PORT", 8501))
 
 # Configuración de la interfaz con Streamlit
 st.set_page_config(page_title="Chatbot Wiki - Entra ID", layout="wide")
