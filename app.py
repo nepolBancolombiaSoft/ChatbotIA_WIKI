@@ -29,6 +29,5 @@ if pregunta:
         st.write("⚠️ No encontré documentos relevantes en la base de datos.")
 
 # 🚀 Ejecutar la aplicación en el puerto correcto
-if __name__ == "__main__":
-    st.write(f"🚀 Ejecutando en el puerto {port}")
-    os.system(f"streamlit run app.py --server.port {port} --server.address 0.0.0.0")
+st.write(f"🚀 Ejecutando en el puerto {port}")
+
