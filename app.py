@@ -28,8 +28,5 @@ if pregunta:
     else:
         st.write("⚠️ No encontré documentos relevantes en la base de datos.")
 
-if __name__ == "__main__":
-    port = obtener_puerto()
-    st.write(f"🚀 Ejecutando en el puerto {port}")
-    st._is_running_with_streamlit = True
-    st.run()
+# 🚀 Mensaje para verificar que la aplicación está corriendo en el puerto correcto
+st.write(f"🚀 Ejecutando en el puerto {obtener_puerto()}")
