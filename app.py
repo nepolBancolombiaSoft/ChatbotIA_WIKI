@@ -6,6 +6,9 @@ from chatbot import generar_respuesta  # ✅ Importar la función correcta
 def obtener_puerto():
     return int(os.getenv("PORT", 8501))
 
+# Obtener y almacenar el puerto al iniciar la aplicación
+port = obtener_puerto()
+
 # Configuración de la interfaz con Streamlit
 st.set_page_config(page_title="Chatbot Wiki - Entra ID", layout="wide")
 st.title("🤖 Chatbot Wiki - Entra ID")
