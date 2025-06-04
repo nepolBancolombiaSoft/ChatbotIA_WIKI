@@ -6,7 +6,7 @@ Este proyecto es un sistema de chatbot basado en inteligencia artificial con int
 
 ```
 proyectoIAwiki_extracted/
-    algunos comandos.txt  # Archivo de comandos útiles o referencias
+    ayudas.txt  # Archivo de comandos útiles o referencias
     app.py  # Archivo principal que ejecuta la aplicación
     chatbot.py  # Módulo del chatbot principal
     config.py  # Archivo de configuración de variables y credenciales

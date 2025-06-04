@@ -10,7 +10,7 @@ Este proyecto es Open Source, por lo que cualquier persona puede contribuir con 
 
 ```
 proyectoIAwiki_extracted/
-    algunos comandos.txt  # Archivo de comandos útiles o referencias
+    ayudas.txt  # Archivo de comandos útiles o referencias
     app.py  # Archivo principal que ejecuta la aplicación
     chatbot.py  # Módulo del chatbot principal
     config.py  # Archivo de configuración de variables y credenciales
